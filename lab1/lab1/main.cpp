@@ -42,12 +42,16 @@ int searchInChunk(const vector<std::string>& chunk, const double value, int thre
     return piValue; // Return pi(x) if found, -1 otherwise
 }
 
-int main() {
+int main(int argc, char* argv[]) {
     std::string filename = "master_file.txt";
-    int number_of_chunks; 
-    cin >> number_of_chunks;
-    
-    int value_to_search; cin >> value_to_search;
+
+    if (argc < 3) {
+        std::cerr << "Usage: " << argv[0] << " <number_of_chunks> <value_to_search>" << std::endl;
+        return 1;
+    }
+
+    int number_of_chunks = std::stoi(argv[1]);
+    int value_to_search = std::stoi(argv[2]);
 
     std::ifstream file(filename);
     std::string line;
