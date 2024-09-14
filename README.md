@@ -1,1 +1,2 @@
-## For lab 1, download the textfile from google classroom and place it in the same folder as the main.cpp code
+## Lab 1
+Parallel file search by spinning for worker nodes and a load balancer using docker
